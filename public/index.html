@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deriv Advanced Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Deriv Advanced Panel</h1>
+
+<div id="top">
+  <select id="market">
+    <option>Volatility 10</option>
+    <option>Volatility 25</option>
+    <option>Volatility 50</option>
+    <option>Volatility 75</option>
+    <option>Volatility 100</option>
+  </select>
+
+  <button onclick="startBot()">Start Bot</button>
+  <button onclick="stopBot()">Stop Bot</button>
+</div>
+
+<div id="chart"></div>
+
+<div id="scanner">
+  Scanner panel
+</div>
+
+<script src="app.js"></script>
+<script src="chart.js"></script>
+<script src="bot.js"></script>
+
+</body>
+</html>
