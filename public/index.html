@@ -1,31 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Deriv Advanced Panel</title>
+  <title>Deriv Panel</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>Deriv Advanced Panel</h1>
+<div id="topbar">
+  <h2>DERIV THIRD PARTY PANEL</h2>
 
-<div id="top">
   <select id="market">
-    <option>Volatility 10</option>
-    <option>Volatility 25</option>
-    <option>Volatility 50</option>
-    <option>Volatility 75</option>
-    <option>Volatility 100</option>
+    <option value="R_10">Vol 10</option>
+    <option value="R_25">Vol 25</option>
+    <option value="R_50">Vol 50</option>
+    <option value="R_75">Vol 75</option>
+    <option value="R_100">Vol 100</option>
   </select>
 
-  <button onclick="startBot()">Start Bot</button>
-  <button onclick="stopBot()">Stop Bot</button>
+  <button onclick="startBot()">START</button>
+  <button onclick="stopBot()">STOP</button>
 </div>
 
-<div id="chart"></div>
+<div id="main">
 
-<div id="scanner">
-  Scanner panel
+  <div id="chart"></div>
+
+  <div id="side">
+
+    <div class="box">
+      Scanner panel
+    </div>
+
+    <div class="box">
+      Bot panel
+    </div>
+
+    <div class="box">
+      Market tracker
+    </div>
+
+  </div>
+
 </div>
 
 <script src="app.js"></script>
@@ -33,4 +49,4 @@
 <script src="bot.js"></script>
 
 </body>
-</html>
+                         </html>
