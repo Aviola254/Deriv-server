@@ -1,7 +1,23 @@
+let botRunning = false;
+
 function startBot(){
-  console.log("bot start")
+
+botRunning = true;
+
+log("bot started");
+
 }
 
 function stopBot(){
-  console.log("bot stop")
+
+botRunning = false;
+
+log("bot stopped");
+
+}
+
+function log(t){
+
+document.getElementById("logs").innerText = t;
+
 }
