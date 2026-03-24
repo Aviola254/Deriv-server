@@ -1,0 +1,71 @@
+body{
+background:#0e1726;
+color:#ffffff;
+font-family:Arial,Helvetica,sans-serif;
+margin:0;
+}
+
+#topbar{
+background:#111827;
+padding:10px;
+display:flex;
+align-items:center;
+gap:10px;
+border-bottom:1px solid #1f2937;
+}
+
+#main{
+display:flex;
+height:90vh;
+}
+
+#left{
+width:70%;
+background:#0b1220;
+padding:10px;
+border-right:1px solid #1f2937;
+}
+
+#right{
+width:30%;
+background:#111827;
+padding:10px;
+overflow:auto;
+}
+
+canvas{
+background:#000000;
+border:1px solid #1f2937;
+width:100%;
+}
+
+button{
+background:#1f2937;
+color:#00ffd5;
+border:1px solid #00ffd5;
+padding:6px;
+margin-top:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#00ffd5;
+color:black;
+}
+
+input,select{
+background:#0b1220;
+color:white;
+border:1px solid #1f2937;
+padding:5px;
+}
+
+h2{
+border-bottom:1px solid #1f2937;
+padding-bottom:5px;
+}
+
+#tradeButtons{
+display:flex;
+gap:5px;
+}
