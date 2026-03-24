@@ -1,0 +1,141 @@
+body{
+margin:0;
+background:#0b1220;
+color:#00e0c6;
+font-family:Arial,Helvetica,sans-serif;
+height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+
+/* TOP BAR */
+
+.topbar{
+
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:10px;
+padding:10px;
+
+background:#0f1a30;
+
+border-bottom:1px solid #00e0c6;
+
+}
+
+
+/* MAIN LAYOUT */
+
+.main{
+
+flex:1;
+
+display:flex;
+
+height:100%;
+
+width:100%;
+
+}
+
+
+/* CHART AREA */
+
+.chart-area{
+
+flex:1;
+
+display:flex;
+
+flex-direction:column;
+
+padding:10px;
+
+}
+
+
+/* SIDE PANEL */
+
+.side{
+
+width:300px;
+
+min-width:260px;
+
+max-width:320px;
+
+border-left:1px solid #00e0c6;
+
+padding:10px;
+
+overflow:auto;
+
+}
+
+
+/* CHART FULL SIZE */
+
+canvas{
+
+width:100% !important;
+
+height:100% !important;
+
+background:black;
+
+border:1px solid #00e0c6;
+
+}
+
+
+/* BUTTONS */
+
+button{
+
+background:#001a1a;
+color:#00e0c6;
+border:1px solid #00e0c6;
+padding:5px 10px;
+margin:3px;
+cursor:pointer;
+
+}
+
+
+/* INPUT */
+
+input,select{
+
+background:black;
+color:#00e0c6;
+border:1px solid #00e0c6;
+padding:5px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.main{
+
+flex-direction:column;
+
+}
+
+.side{
+
+width:100%;
+
+max-width:100%;
+
+border-left:none;
+
+border-top:1px solid #00e0c6;
+
+}
+
+}
