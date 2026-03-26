@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title>Forge Ultimate AI</title>
+
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+
+<input id="tokenInput" placeholder="Enter Token">
+<button onclick="connectWS()">CONNECT</button>
+
+<span id="account">Account: -</span>
+<span id="balance">Balance: 0</span>
+
+</div>
+
+
+<div class="main">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+<div onclick="showTab('trade')">TRADE</div>
+</div>
+
+
+<!-- CONTENT -->
+<div class="content">
+
+<div id="trade" class="tab active">
+
+<div class="trade-container">
+
+<!-- LEFT -->
+<div class="left">
+
+<canvas id="chart"></canvas>
+
+<div id="price">Price: 0</div>
+
+<div class="signal-box">
+<h3>AI Signal</h3>
+<div id="trend">Trend: -</div>
+<div id="strength">Confidence: -</div>
+<div id="suggestion">AI Action: -</div>
+</div>
+
+</div>
+
+
+<!-- RIGHT -->
+<div class="right">
+
+<h3>Trade Panel</h3>
+
+<label>Market</label>
+<select id="market" onchange="subscribeMarket()">
+<option value="R_10">Volatility 10</option>
+<option value="R_25" selected>Volatility 25</option>
+<option value="R_50">Volatility 50</option>
+<option value="R_75">Volatility 75</option>
+<option value="R_100">Volatility 100</option>
+</select>
+
+<label>Stake</label>
+<input id="stake" value="1">
+
+<label>Duration</label>
+<input id="duration" value="1">
+
+<label>Contract</label>
+<select id="type">
+<option value="CALL">CALL</option>
+<option value="PUT">PUT</option>
+</select>
+
+<button onclick="buy()">BUY</button>
+
+
+<!-- AI AUTO TRADE -->
+<div class="bot-box">
+
+<h3>AI Auto Trade</h3>
+
+<label>AI Mode</label>
+<select id="aiToggle">
+<option value="ON">ON</option>
+<option value="OFF">OFF</option>
+</select>
+
+<label>Min Confidence (%)</label>
+<input id="minConfidence" value="70">
+
+<div id="aiStatus">AI: OFF</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TAB SCRIPT -->
+<script>
+function showTab(id){
+document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+document.getElementById(id).classList.add("active");
+}
+</script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
